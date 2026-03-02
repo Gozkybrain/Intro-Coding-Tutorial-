@@ -1,9 +1,10 @@
 import React from 'react';
+import Login from './Login';
 
 const GetAuth = () => {
     return (
         <div>
-            routing for non users
+            <Login />
         </div>
     );
 }
