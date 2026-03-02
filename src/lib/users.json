@@ -1,0 +1,57 @@
+[
+  {
+    "id": "o1m2k3g4a",
+    "firstName": "Chukwudi",
+    "lastName": "Okafor",
+    "dob": "May 15, 1990",
+    "email": "chukwudi.okafor@example.com",
+    "gender": "male",
+    "role": "user",
+    "occupation": "Software Engineer",
+    "address": "123 Ajao Street, Ikeja, Lagos"
+  },
+  {
+    "id": "i5d6o7a8h",
+    "firstName": "Ngozi",
+    "lastName": "Ifeoma",
+    "dob": "July 22, 1992",
+    "email": "ngozi.ifeoma@example.com",
+    "gender": "female",
+    "role": "user",
+    "occupation": "Product Manager",
+    "address": "456 Abakpa Nike, Enugu"
+  },
+  {
+    "id": "k9s0b1u2n",
+    "firstName": "Ifeoma",
+    "lastName": "Nwachukwu",
+    "dob": "November 30, 1985",
+    "email": "ifeoma.nwachukwu@example.com",
+    "gender": "female",
+    "role": "user",
+    "occupation": "Graphic Designer",
+    "address": "789 Ogui Road, Enugu"
+  },
+  {
+    "id": "p3d4n5s6h",
+    "firstName": "Ugochukwu",
+    "lastName": "Igbokwe",
+    "dob": "February 18, 1988",
+    "email": "ugochukwu.igbokwe@example.com",
+    "gender": "male",
+    "role": "admin",
+    "occupation": "Data Scientist",
+    "address": "101 Awka, Anambra"
+  },
+  {
+    "id": "a7k8b9c0y",
+    "firstName": "Chidera",
+    "lastName": "Eze",
+    "dob": "September 4, 1995",
+    "email": "chidera.eze@example.com",
+    "gender": "male",
+    "role": "user",
+    "occupation": "Marketing Specialist",
+    "address": "202 Owerri, Imo"
+  }
+]
