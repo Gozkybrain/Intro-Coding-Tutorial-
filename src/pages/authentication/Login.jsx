@@ -1,26 +1,33 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate instead of useHistory
-import users from './../../lib/users.json'; // Import the users data from lib/users.json
+import { useNavigate } from 'react-router-dom';
+import users from './../../lib/users.json';
 
-const Login = () => {
+const Login = ({ setUser }) => {
   const [userId, setUserId] = useState('');
   const [message, setMessage] = useState('');
   const [isError, setIsError] = useState(false);
-  const navigate = useNavigate(); // Use navigate instead of history
+  const navigate = useNavigate();
 
   const handleLogin = () => {
-    const user = users.find(user => user.id === userId);
-    if (user) {
+    const foundUser = users.find(user => user.id === userId);
+
+    if (foundUser) {
       setMessage('Login Successful!');
       setIsError(false);
-      localStorage.setItem('loggedInUser', JSON.stringify(user)); // Store user data in localStorage
 
-      // Redirect to the appropriate page based on role
-      if (user.role === 'admin') {
-        navigate('/getadmin'); // Use navigate for redirection
+      // Save to localStorage
+      localStorage.setItem('loggedInUser', JSON.stringify(foundUser));
+
+      // Update App state
+      setUser(foundUser);
+
+      // Redirect based on role
+      if (foundUser.role === 'admin') {
+        navigate('/getadmin');
       } else {
-        navigate('/getuser'); // Use navigate for redirection
+        navigate('/getuser');
       }
+
     } else {
       setMessage('Invalid ID. Please try again.');
       setIsError(true);
@@ -36,14 +43,17 @@ const Login = () => {
   return (
     <div className="login-container">
       <h2>Login</h2>
+
       <input
         type="text"
         placeholder="Enter your ID"
         value={userId}
         onChange={(e) => setUserId(e.target.value)}
-        onKeyPress={handleKeyPress} // Add key press listener
+        onKeyDown={handleKeyPress}
       />
+
       <button onClick={handleLogin}>Login</button>
+
       {message && (
         <p style={{ color: isError ? 'red' : 'green' }}>
           {message}
